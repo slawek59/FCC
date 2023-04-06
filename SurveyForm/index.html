@@ -4,63 +4,83 @@
 <head>
     <title>Survey Form</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <main>
-    <h1 id="title">Ankieta z muzycznych zajęć</h1>
+    <h1 id="title">Ankieta z muzycznych zajęć.</h1>
     <p id="description">Powiedz mi, jak Ci się podobało i daj mi kilka wskazówek na przyszłość</p>
     <form id="survey-form">
         <fieldset>
-            <label>Imię
-                <input type="text" placeholder="Wpisz swoje imię">
-            </label>Email
-            <input type="text" placeholder="Wpisz swój email">
-            <label>Wiek(opcjonalnie)
-                <input type="text" placeholder="Wiek">
+            <label for="name">Imię
+                <input id="name" name="name" type="text" placeholder="Wpisz swoje imię" required />
+            </label>
+            <label for="email">Email(opcjonalnie)
+                <input id="email" name="name" type="email" placeholder="Wpisz swój email" />
+            </label>
+            <label for="age">Wiek(opcjonalnie)
+                <input id="age" name="name" type="number" placeholder="Wiek" min="10" max="200" />
             </label>
             <label>Poziom zaawansowania
-                <select>
-                    <option>
+                <select id="dropdown-1">
+                    <option value="">
                         (wybierz swój poziom)
                     </option>
-                    <option>"Gitara to takie duże skrzypce."
+                    <option value="1">"Gitara to takie duże skrzypce."
                     </option>
-                    <option>"Wlazł kotek na płotek z nut? Dam radę!"
+                    <option value="2">"Wlazł kotek na płotek z nut? Dam radę!"
                     </option>
-                    <option>"Dla Elizy gram z nut, czasem z tabulatury".
+                    <option value="3">"Dla Elizy gram z nut, czasem z tabulatury".
                     </option>
-                    <option>"Solówki, nuty, tapping, bendy, tremolo."
+                    <option value="4">"Solówki, nuty, tapping, bendy, tremolo."
                     </option>
-                    <option>"Wszystko po trochu."
+                    <option value="5">"Wszystko po trochu."
                     </option>
                 </select>
-
             </label>
         </fieldset>
         <fieldset>Czy byś polecił/-a zajęcia swoim znajomym?
-            <input type="radio" />Już poleciłem/-am.
-            <input type="radio" />Oczywiście!
-            <input type="radio" />Nie mam znajomych, polecę nieznajomym.
+            <label for="share-done">
+                <input id="share-done" type="radio" name="share" />Już poleciłem/-am.
+            </label>
+            <label for="share-sure">
+                <input id="share-sure" type="radio" name="share" />Oczywiście!
+            </label>
+            <label for="share-new">
+                <input id="share-new" type="radio" name="share" />Nie mam znajomych, polecę nieznajomym.
+            </label>
         </fieldset>
         <fieldset>Najbardziej w zajęciach podoba Ci się to, że:
-            <select>
-                <option>(wybierz jedno)</option>
-                <option>zajęcia są ciekawe.</option>
-                <option>prowadzący jest fajny/pozytywny/dobrze tłumaczy.</option>
-                <option>obowiązuje żelazna dyscyplina.</option>
-                <option>gramy muzykę, bo po prostu lubię grać muzykę.</option>
-                <option>po godzinie w końcu się kończą.</option>
-            </select>
+            <label>
+                <select id="dropdown-2">
+                    <option value="">(wybierz jedno)</option>
+                    <option value="6">zajęcia są ciekawe.</option>
+                    <option value="7">prowadzący jest fajny / pozytywny / dobrze tłumaczy.</option>
+                    <option value="8">obowiązuje żelazna dyscyplina.</option>
+                    <option value="9">gramy muzykę, bo po prostu lubię grać muzykę.</option>
+                    <option value="10">po godzinie w końcu się kończą.</option>
+                </select>
+            </label>
         </fieldset>
-        <fieldset>Chciałbym/chciałabym, aby na zajęciach było więcej:
-            <input type="checkbox"> Grania z nut.
-            <input type="checkbox"> Grania z tabulatur.
-            <input type="checkbox"> Muzyki klasycznej.
-            <input type="checkbox"> Muzyki rockowej.
-            <input type="checkbox"> Po prostu bym chciał/-a mieć więcej zajęć.
+        <fieldset>Chciałbym/chciałabym, aby na zajęciach było więcej (możesz wybrać kilka):
+            <label>
+                <input type="checkbox" value="11" /> grania z nut.
+            </label>
+            <label>
+                <input type="checkbox" value="12" /> grania z tabulatur.
+            </label>
+            <label>
+                <input type="checkbox" value="13" /> muzyki klasycznej.
+            </label>
+            <label>
+                <input type="checkbox" value="14" /> muzyki rockowej.
+            </label>
+            <label>
+                <input type="checkbox" value="15" /> Po prostu bym chciał/-a mieć więcej zajęć.
+            </label>
         </fieldset>
         Tu wpisz to, co uważasz za słuszne.
         <textarea placeholder="Pole do popisu."></textarea>
-        <input type="submit">
+        <input id="submit" type="submit">
     </form>
 </main>
 
