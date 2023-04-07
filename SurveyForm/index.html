@@ -11,17 +11,17 @@
     <p id="description">Powiedz mi, jak Ci się podobało i daj mi kilka wskazówek na przyszłość</p>
     <form id="survey-form">
         <fieldset>
-            <label for="name">Imię
+            <label id="name-label" for="name">Imię
                 <input id="name" name="name" type="text" placeholder="Wpisz swoje imię" required />
             </label>
-            <label for="email">Email(opcjonalnie)
+            <label id="email-label" for="email">Email(opcjonalnie)
                 <input id="email" name="name" type="email" placeholder="Wpisz swój email" />
             </label>
-            <label for="age">Wiek(opcjonalnie)
-                <input id="age" name="name" type="number" placeholder="Wiek" min="10" max="200" />
+            <label id="number-label" for="number">Wiek(opcjonalnie)
+                <input id="number" name="name" type="number" placeholder="Wiek" min="10" max="200" />
             </label>
             <label>Poziom zaawansowania
-                <select id="dropdown-1">
+                <select id="dropdown">
                     <option value="">
                         (wybierz swój poziom)
                     </option>
@@ -38,18 +38,21 @@
                 </select>
             </label>
         </fieldset>
-        <fieldset>Czy byś polecił/-a zajęcia swoim znajomym?
+        <fieldset>
+            <p>Czy byś polecił/-a zajęcia swoim znajomym?</p>
             <label for="share-done">
-                <input id="share-done" type="radio" name="share" />Już poleciłem/-am.
+                <input id="share-done" type="radio" name="share" value="1" class="share" />Już poleciłem/-am.
             </label>
             <label for="share-sure">
-                <input id="share-sure" type="radio" name="share" />Oczywiście!
+                <input id="share-sure" type="radio" name="share" value="2" class="share" />Oczywiście!
             </label>
             <label for="share-new">
-                <input id="share-new" type="radio" name="share" />Nie mam znajomych, polecę nieznajomym.
+                <input id="share-new" type="radio" name="share" value="3" class="share" />Nie mam znajomych, polecę
+                nieznajomym.
             </label>
         </fieldset>
-        <fieldset>Najbardziej w zajęciach podoba Ci się to, że:
+        <fieldset>
+            <p>Najbardziej w zajęciach podoba Ci się to, że:</p>
             <label>
                 <select id="dropdown-2">
                     <option value="">(wybierz jedno)</option>
@@ -61,25 +64,28 @@
                 </select>
             </label>
         </fieldset>
-        <fieldset>Chciałbym/chciałabym, aby na zajęciach było więcej (możesz wybrać kilka):
-            <label>
+        <fieldset>
+            <p>Chciałbym/chciałabym, aby na zajęciach było więcej (możesz wybrać kilka):</p>
+            <label class="box">
                 <input type="checkbox" value="11" /> grania z nut.
             </label>
-            <label>
+            <label class="box">
                 <input type="checkbox" value="12" /> grania z tabulatur.
             </label>
-            <label>
+            <label class="box">
                 <input type="checkbox" value="13" /> muzyki klasycznej.
             </label>
-            <label>
+            <label class="box">
                 <input type="checkbox" value="14" /> muzyki rockowej.
             </label>
-            <label>
+            <label class="box">
                 <input type="checkbox" value="15" /> Po prostu bym chciał/-a mieć więcej zajęć.
             </label>
         </fieldset>
-        Tu wpisz to, co uważasz za słuszne.
-        <textarea placeholder="Pole do popisu."></textarea>
+        <fieldset>
+            <p>Tu wpisz to, co uważasz za słuszne.</p>
+            <textarea placeholder="Pole do popisu."></textarea>
+        </fieldset>
         <input id="submit" type="submit">
     </form>
 </main>
